@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="icon.jpg">
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>    
+    <style>
+        body {
+            font-family: Verdana, Tahoma, sans-serif;
+                margin: 0;
+                    padding: 0;
+                        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("background.jpg");
+                        color: white;
+                    background-repeat: no-repeat;
+                background-size: cover;
+            background-color: dodgerblue; /*Optional lang kapag hindi gumana ang background image*/
+        }
+        header {
+            padding: 15px;
+            text-align: center;
+            background-image: linear-gradient(to left,dodgerblue,rgb(34, 174, 255), rgb(11, 110, 181)); /*Kayo po bahala sa color*/
+        }
+        @keyframes rainbow {
+        0% { color: red; }
+        16.666% { color: orange; }
+        33.333% { color: yellow; }
+        50% { color: green; }
+        66.666% { color: blue; }
+        83.333% { color: indigo; }
+        100% { color: violet; }
+    }
+    h1 {
+        font-size: 2em;
+        text-align: center;
+        animation: rainbow 6s linear infinite; /*Ito yung sa keyframes kaya iba't-ibang kulay ang letters*/
+    }
+    nav {
+            position: relative;
+        }
+        #menu-toggle {
+            display: none;
+        }
+        .menu-icon {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 15px;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 2;
+        }
+        .menu-icon div {
+            width: 30px;
+            height: 4px;
+            background-color: white;
+            margin: 5px 0;
+            transition: 0.4s;
+        }
+        .menu {
+            display: none;
+            flex-direction: column;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #35d626;
+            position: absolute;
+            left: 0;
+            width: 200px;
+        }
+
+        .menu li {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .menu li a {
+            color: black;
+            text-decoration: none;
+            display: block;
+        }
+
+        .menu li a:hover {
+            background-color: #070047;
+            color: white;
+        }
+             .menu {
+                display: none;
+                flex-direction: column;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                background-color: #5dccff;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 200px;
+            }
+            #menu-toggle:checked + .menu-icon .bar1 {
+                transform: rotate(-45deg) translate(-9px, 10px);
+            }
+            #menu-toggle:checked + .menu-icon .bar2 {
+                opacity: 0;
+            }
+            #menu-toggle:checked + .menu-icon .bar3 {
+                transform: rotate(45deg) translate(-10px, -10px);
+            }
+            #menu-toggle:checked ~ .menu {
+                display: flex;
+            }
+            footer {
+                background-color: #0011ff;
+                padding: 10px;
+                text-align: center;
+                color: white;
+                bottom: 0;
+            }
+            article {
+                float: right;
+                padding: 30px;
+                width: 85%;
+                height: 550px;
+                text-align: justify;
+            }  
+            section::after {
+                content: "";
+                display: table;
+                clear: both;
+            } 
+            table {
+                width: 80%;
+                margin: 20px auto;
+                border-collapse: collapse;
+            }
+            th, td {
+                border: 1px solid #ddd;
+                padding: 18px;
+                text-align: left;
+                color: white;
+            }   
+            table {
+                width: 80vw;
+                margin: 20px auto;
+                border-collapse: collapse;
+            }
+            th, td {
+                border: 1px solid white;
+                padding: 15px;
+                text-align: left;
+            } 
+</style>
+<body>
+    <header>
+        <h1>Empowering The Youth For National Resillience</h1>
+    </header>
+    <section>
+    <nav>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </label>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="courses.html">Courses</a></li>
+        </ul>
+    </nav>
+
+<article>
+    <H4><font color="white" face="monospace" size="10PX">Ramon Magsaysay High School Manila</font></H4><br>
+    <p>This is the official webpage of RMHS Manila</p>
+
+    <table>
+        <tr>
+            <th>THE DEPED VISION</th>
+            <th>THE DEPED MISSION</th>
+            <th>THE CORE VALUES</th>
+        </tr>
+        <tr>
+            <td>We dream of Filipinos<br>
+                who passionately love their country<br>
+                and whose values and competencies<br>
+                enable them to realize their full potential<br>
+                and contribute meaningfully to building the nation.<br><br>
+
+                As a learner-centered public institution,<br>
+                the Department of Education<br>
+                continuously improves itself<br>
+                to better serve its stakeholders.<br>
+            </td>
+            <td>To protect and promote the right of every Filipino to quality, equitable, culture-based, and complete basic education where: <BR><br>
+                <b>Students</b> learn in a child-friendly, gender-sensitive, safe, and motivating environment.<BR><br>
+                <b>Teachers</b> facilitate learning and constantly nurture every learner.<BR><br>
+                <b>Administrators</b> and staff, as stewards of the institution, ensure an enabling and supportive environment for effective learning to happen.<br><BR>
+                <b>Family,</b> community, and other stakeholders are actively engaged and share responsibility for developing life-long learners.<BR><br>
+            </td>
+            <td>
+            <P>
+            <B> Maka-Diyos<BR>
+                Maka-tao<br>
+                Makakalikasan<br>
+                Makabansa<br>
+            </B>
+            </P>
+            </td>
+        </tr>
+<tr>
+    <td>Add Content Here!</td>
+    <td>Add Content Here!</td>
+    <td>Add Content Here!</td>
+</tr>
+</table>    
+</article> 
+</section>  
+<footer><P>Designed & Developed By: <strong>RMHS-MANILA WEBPAGE TEAM</strong><span>  &copy;WEBPAGE DEVELOPMENT 2025</P>
+
+</FOOTER>    
+</body>
+</html>
+<!--FOR THOSE WHO WILL USE THIS CODE NEXT SCHOOL YEAR, HERE ARE THE LIST OF MY TIPS FOR YOU... I HOPE IT WILL HELP YOU-->
+<!--The content above is just an example-->
+<!----The 'marquee' in header is the one who responsible for the movement of text'---->
+<!-----The "meta" Tag is not necesary to put in the code☺---->
+<!--Just study and discover the concept and logic of this entire code and you will easily to memorize it-->
+<!--GOODLUCK-->
