@@ -7,6 +7,26 @@
     <title>Courses</title>
 </head>
 <style>
+     @media (min-width: 767px){ /*para lang po maging CP friendly lang siya, not necessary sa desktop*/
+   table{
+       flex-direction: column;
+       padding: 10px;
+   }
+     th, td{
+     flex-direction: column;
+       padding: 10px;    
+     }
+        }   
+ @media (max-width: 768px){  /*para lang po maging CP friendly lang siya, not necessary sa desktop*/
+     table{
+         flex-direction: row;
+         padding: 20px;
+     }
+     th, td{
+           flex-direction: row;
+         padding: 20px;  
+     }
+ }       
     body {
         margin: 0;
         padding: 0;
@@ -58,7 +78,8 @@
     }
     footer{
         bottom: 0; 
-        padding: 0px;
+        width: 100%;
+        padding: 18px 18px;
         background-color: blue;
         text-align: center;
         font-family: verdana;
