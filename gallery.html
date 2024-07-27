@@ -1,27 +1,24 @@
-
 <html>
 <head>
   <title>Gallery</title>
   <link rel="icon" href="icon.jpg">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>	
 <style>
 body {
   margin: 0;
   font-family: Arial;
-  background-color: dodgerblue;
+  background-image: linear-gradient(45deg, dodgerblue, blue, aqua);
 }
-
 .topnav {
   overflow: hidden;
-  background-color: #009697;
+  background-color: #333FF;
 }
-
 .topnav a {
   float: right;
   display: block;
   color: #f7f7f7;
-  text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
@@ -35,13 +32,12 @@ body {
 .topnav a.active {
   color: white;
 }
-
 .topnav .icon {
   display: none;
 }
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("download.jpg");
-  height: 50%;
+  height: 40%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -51,12 +47,21 @@ body {
 .hero-text {
   text-align: center;
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 30%;
+  left: 30%;
   transform: translate(-50%, -50%);
   color: white;
 }
-footer{TEXT-ALIGN:center;background-color: blue; padding: 18px 18px; height: inherit; font-family: monospace; font-size: 18px; color: white;bottom: 0;}
+footer {
+        text-align:center;
+	background-color: blue; 
+	padding: 18px 18px; 
+	height: inherit; 
+	font-family: monospace; 
+	font-size: 18px; 
+	color: white;
+	bottom: 0;
+}
 div.scroll-container {
 background-color: dodgerblue;
 padding: 10px;
@@ -66,19 +71,8 @@ overflow: auto;
 div.scroll-container img {
 padding: 20px 0;
 }
-
-
 </style>
-</head>
 <body>
-<div class="topnav">
-  <a href="gallery.html">Gallery</a>
-  <a href="courses.html">Courses</a>
-  <a href="about.html">About</a>
-  <a href="index.html">Home</a>
-  </a>
-</div>
-
 <div style="padding-left:16px">
  </div>
 <div class="hero-image">
@@ -86,6 +80,12 @@ padding: 20px 0;
     <h1 style="font-size:50px">Applying Quality Industry Standards</h1>
     <p>Innovation through Quality Experiences</p>
   </div>
+</div>
+<div class="topnav">
+  <a href="gallery.html">Gallery</a>
+  <a href="courses.html">Courses</a>
+  <a href="about.html">About</a>
+  <a href="index.html">Home</a>
 </div>
 <p align="center"><font color="white" face="lucida handwriting" size="5px"> The Best of TLE INDUSTRY STANDARDS</font></p>
 <div class="scroll-container" id="scroll-container">
