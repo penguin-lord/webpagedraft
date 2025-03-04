@@ -1,1 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic HTML & CSS Attributes</title>
+    <style>
+       * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #007bff;
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hamburger Menu for Mobile */
+        .menu-toggle {
+            display: none;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #007bff;
+                text-align: center;
+                padding: 10px 0;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            /* Show menu when checkbox is checked */
+            .menu-toggle:checked + .nav-links {
+                display: flex;
+            }
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        pre {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+            border-radius: 5px;
+        }
+        @media (max-width: 600px) {
+            table {
+                font-size: 12px;
+            }
+            th, td {
+                padding: 6px;
+            }
+        }
+    </style>
+</head>
+<body>
+   <nav class="navbar">
+        <a href="#" class="logo">Hello World</a>
+        
+        <!-- Hidden checkbox for menu toggle -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Basic HTML & CSS Attributes</h1>
+        
+        <h2>HTML Basic Attributes</h2>
+        <table>
+            <tr>
+                <th>Attribute</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td>id</td>
+                <td>Specifies a unique id for an element.</td>
+                <td><pre>&lt;p id="intro"&gt;Hello World!&lt;/p&gt;</pre></td>
+            </tr>
+            <tr>
+                <td>class</td>
+                <td>Specifies one or more class names for an element.</td>
+                <td><pre>&lt;p class="text"&gt;Hello World!&lt;/p&gt;</pre></td>
+            </tr>
+            <tr>
+                <td>style</td>
+                <td>Inline CSS styles for an element.</td>
+                <td><pre>&lt;p style="color: red;"&gt;Hello World!&lt;/p&gt;</pre></td>
+            </tr>
+            <tr>
+                <td>title</td>
+                <td>Specifies extra information when hovering over an element.</td>
+                <td><pre>&lt;p title="Hello Tooltip"&gt;Hover over me!&lt;/p&gt;</pre></td>
+            </tr>
+            <tr>
+                <td>alt</td>
+                <td>Alternative text for images.</td>
+                <td><pre>&lt;img src="image.jpg" alt="Sample Image"&gt;</pre></td>
+            </tr>
+            <tr>
+                <td>href</td>
+                <td>Specifies the URL of a link.</td>
+                <td><pre>&lt;a href="https://example.com"&gt;Visit Example&lt;/a&gt;</pre></td>
+            </tr>
+        </table>
+        
+        <h2>Basic CSS Properties</h2>
+        <table>
+            <tr>
+                <th>Property</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td>color</td>
+                <td>Sets the text color.</td>
+                <td><pre>color: blue;</pre></td>
+            </tr>
+            <tr>
+                <td>background-color</td>
+                <td>Sets the background color.</td>
+                <td><pre>background-color: yellow;</pre></td>
+            </tr>
+            <tr>
+                <td>font-size</td>
+                <td>Defines the size of text.</td>
+                <td><pre>font-size: 16px;</pre></td>
+            </tr>
+            <tr>
+                <td>margin</td>
+                <td>Creates space outside an element.</td>
+                <td><pre>margin: 10px;</pre></td>
+            </tr>
+            <tr>
+                <td>padding</td>
+                <td>Creates space inside an element.</td>
+                <td><pre>padding: 20px;</pre></td>
+            </tr>
+            <tr>
+                <td>border</td>
+                <td>Defines a border around an element.</td>
+                <td><pre>border: 2px solid black;</pre></td>
+            </tr>
+        </table>
+        
+        <h2>Table Example</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Country</th>
+            </tr>
+            <tr>
+                <td>John Doe</td>
+                <td>25</td>
+                <td>USA</td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td>30</td>
+                <td>Canada</td>
+            </tr>
+        </table>
+        
+        <h2>Image Example</h2>
+        <img src="" alt="Placeholder Image">
+    </div>
+</body>
+</html>
 
