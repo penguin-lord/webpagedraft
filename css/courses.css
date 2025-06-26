@@ -1,0 +1,132 @@
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #1e3a8a, #60a5fa, #67e8f9);
+      color: black;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    audio {
+      display: none;
+    }
+
+    header {
+      background-color: #3b82f6;
+      padding: 24px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+
+    nav {
+      background-color: #93c5fd;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      padding: 16px;
+      font-weight: 600;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      transition: 0.3s ease;
+      background-color: transparent;
+    }
+
+    nav a:hover {
+      background-color: white;
+      color: black;
+    }
+
+    main {
+      flex-grow: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 32px 16px;
+      width: 100%;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    thead {
+      background-color: #1d4ed8;
+      color: white;
+    }
+
+    th, td {
+      padding: 16px;
+      text-align: center;
+    }
+
+    tbody tr {
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: #1e40af;
+      color: white;
+      text-align: center;
+      padding: 16px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav a {
+        width: 100%;
+        text-align: center;
+      }
+
+      img {
+        width: 120px;
+        height: 120px;
+      }
+
+      th, td {
+        padding: 12px;
+        font-size: 0.95rem;
+      }
+    }

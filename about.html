@@ -5,132 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | RMHS</title>
   <link rel="icon" href="icon.jpg" />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url("about_background.jpg") no-repeat center center/cover;
-      color: white;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    header {
-      background-color: rgba(0, 129, 154, 0.95);
-      padding: 1.5rem;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 2rem;
-      animation: rainbow 5s linear infinite;
-    }
-
-    nav {
-      background-color: #10efef;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    nav a {
-      padding: 15px 20px;
-      text-decoration: none;
-      color: black;
-      font-weight: bold;
-      transition: 0.3s;
-      animation: rainbow 10s linear infinite;
-    }
-
-    nav a:hover {
-      background-color: purple;
-      color: white;
-    }
-
-    @keyframes rainbow {
-      0% { color: red; }
-      25% { color: orange; }
-      50% { color: yellow; }
-      75% { color: green; }
-      100% { color: blue; }
-    }
-
-    main {
-      flex: 1;
-      padding: 2rem;
-      backdrop-filter: brightness(0.9);
-    }
-
-    h3 {
-      text-align: center;
-      margin-bottom: 2rem;
-      font-family: "Times New Roman", Times, serif;
-    }
-
-    .table-wrapper {
-      overflow-x: auto;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 0 auto;
-      background-color: rgba(0, 0, 0, 0.4);
-      border-radius: 10px;
-      overflow: hidden;
-    }
-
-    th, td {
-      padding: 20px;
-      text-align: center;
-      border: 1px solid white;
-    }
-
-    td img {
-      width: 100%;
-      max-width: 350px;
-      height: auto;
-      border-radius: 8px;
-    }
-
-    footer {
-      background-color: #003366;
-      text-align: center;
-      padding: 1rem;
-      font-size: 14px;
-      color: white;
-    }
-
-    @media (max-width: 768px) {
-      th, td {
-        font-size: 14px;
-        padding: 10px;
-      }
-
-      nav a {
-        flex: 1 1 100%;
-        text-align: center;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="css/about.css">
 </head>
 <body>
-
   <audio loop autoplay>
     <source src="rmhs_hymn.mp3" type="audio/mpeg" />
     Your browser does not support the audio element.
   </audio>
-
   <header>
     <h1>TLE INDUSTRY STANDARDS</h1>
   </header>
-
   <nav>
     <a href="index.html">HOME</a>
     <a href="about.html">ABOUT</a>
@@ -138,10 +22,8 @@
     <a href="courses.html">COURSES</a>
     <a href="attribute.html">ATTRIBUTE</a>
   </nav>
-
   <main>
     <h3>Setting the Benchmark: Advancing TLE Industry Standards for Innovation and Excellence</h3>
-
     <div class="table-wrapper">
       <table>
         <thead>
@@ -176,10 +58,8 @@
       </table>
     </div>
   </main>
-
   <footer>
     Designed & Developed By: <strong>RMHS-MANILA WEBPAGE TEAM</strong> &copy; Webpage Development 2025
   </footer>
-
 </body>
 </html>

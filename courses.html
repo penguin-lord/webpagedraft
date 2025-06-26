@@ -5,11 +5,11 @@
   <link rel="icon" href="icon.jpg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Courses | RMHS</title>
-
-  <!-- ✅ Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/courses.css">
+  
 </head>
-<body class="bg-gradient-to-br from-blue-700 via-blue-400 to-cyan-300 text-black font-sans min-h-screen flex flex-col">
+
+<body>
 
   <!-- Audio Background -->
   <audio autoplay loop>
@@ -18,61 +18,49 @@
   </audio>
 
   <!-- Header -->
-  <header class="bg-blue-500 py-6 text-center">
-    <h1 class="text-2xl md:text-4xl font-bold animate-pulse text-white">
-      Empowering The Youth For National Resilience
-    </h1>
+  <header>
+    <h1>Empowering The Youth For National Resilience</h1>
   </header>
 
   <!-- Navigation Bar -->
-  <nav class="bg-blue-300 shadow-md flex flex-wrap justify-center md:justify-between px-4 py-3 text-white font-semibold">
-    <a href="index.html" class="px-4 py-2 hover:text-black hover:bg-white rounded-md transition">Home</a>
-    <a href="about.html" class="px-4 py-2 hover:text-black hover:bg-white rounded-md transition">About</a>
-    <a href="gallery.html" class="px-4 py-2 hover:text-black hover:bg-white rounded-md transition">Gallery</a>
-    <a href="courses.html" class="px-4 py-2 hover:text-black hover:bg-white rounded-md transition">Courses</a>
-    <a href="attribute.html" class="px-4 py-2 hover:text-black hover:bg-white rounded-md transition">Attribute</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="courses.html">Courses</a>
+    <a href="attribute.html">Attribute</a>
   </nav>
 
   <!-- Main Content -->
-  <main class="flex-grow container mx-auto px-4 py-8">
-    <div class="overflow-x-auto">
-      <table class="w-full text-left bg-white rounded-xl shadow-md overflow-hidden">
-        <thead class="bg-blue-700 text-white">
+  <main>
+    <div style="overflow-x: auto;">
+      <table>
+        <thead>
           <tr>
-            <th class="p-4 text-center text-lg">Courses</th>
-            <th class="p-4 text-center text-lg">Particular Activity</th>
+            <th>Courses</th>
+            <th>Particular Activity</th>
           </tr>
         </thead>
-        <tbody class="text-center">
-          <tr class="border-b">
-            <td class="p-4">Shielded Metal Arc Welding</td>
-            <td class="p-4">
-              <img src="courses_img/smaw.jpg" alt="SMAW" class="mx-auto w-40 h-40 object-cover rounded-lg" />
-            </td>
-          </tr>
-          <tr class="border-b">
-            <td class="p-4">Electrical Installation and Maintenance</td>
-            <td class="p-4">
-              <img src="courses_img/ELECTRICAL.jpg" alt="Electrical" class="mx-auto w-40 h-40 object-cover rounded-lg" />
-            </td>
-          </tr>
-          <tr class="border-b">
-            <td class="p-4">Carpentry</td>
-            <td class="p-4">
-              <img src="courses_img/carpentry.jpg" alt="Carpentry" class="mx-auto w-40 h-40 object-cover rounded-lg" />
-            </td>
-          </tr>
-          <tr class="border-b">
-            <td class="p-4">Information and Communications Technology</td>
-            <td class="p-4">
-              <img src="courses_img/ict.jpg" alt="ICT" class="mx-auto w-40 h-40 object-cover rounded-lg" />
-            </td>
+        <tbody>
+          <tr>
+            <td>Shielded Metal Arc Welding</td>
+            <td><img src="courses_img/smaw.jpg" alt="SMAW" /></td>
           </tr>
           <tr>
-            <td class="p-4">Automotive Servicing</td>
-            <td class="p-4">
-              <img src="img/12.JPG" alt="Automotive" class="mx-auto w-40 h-40 object-cover rounded-lg" />
-            </td>
+            <td>Electrical Installation and Maintenance</td>
+            <td><img src="courses_img/ELECTRICAL.jpg" alt="Electrical" /></td>
+          </tr>
+          <tr>
+            <td>Carpentry</td>
+            <td><img src="courses_img/carpentry.jpg" alt="Carpentry" /></td>
+          </tr>
+          <tr>
+            <td>Information and Communications Technology</td>
+            <td><img src="courses_img/ict.jpg" alt="ICT" /></td>
+          </tr>
+          <tr>
+            <td>Automotive Servicing</td>
+            <td><img src="img/12.JPG" alt="Automotive" /></td>
           </tr>
         </tbody>
       </table>
@@ -80,7 +68,7 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-blue-900 text-white text-center py-4 text-sm">
+  <footer>
     <p>Designed & Developed By: <strong>RMHS WEBPAGE TEAM</strong></p>
     <p>&copy; Webpage Making 2025</p>
   </footer>
