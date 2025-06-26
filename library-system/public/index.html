@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple Landing Page</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(120deg, #00bcd4, #2196f3);
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      padding: 60px 20px 40px;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+
+    p {
+      font-size: 1.2em;
+      opacity: 0.9;
+    }
+
+    button {
+      margin-top: 30px;
+      padding: 15px 30px;
+      background: white;
+      border: none;
+      border-radius: 30px;
+      color: #2196f3;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #f0f0f0;
+    }
+
+    section#about {
+      background: #ffffff10;
+      padding: 60px 20px;
+      margin-top: 50px;
+    }
+
+    section#about h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    section#about p {
+      max-width: 600px;
+      margin: auto;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      opacity: 0.8;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to My Landing Page</h1>
+    <p>Your journey to success begins here.</p>
+    <button onclick="scrollToAbout()">About Me</button>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm Gels Kazama — an aspiring ICT soon to be BSIT student and tech-driven creator. 
+      Passionate about technology, security, and innovation, I build, break, and rebuild ideas from scratch. 
+      From coding on mobile using Termux to leading future digital ventures, this is just the beginning of my journey.
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 Gels Kazama. All rights reserved.
+  </footer>
+
+  <script>
+    function scrollToAbout() {
+      document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+
+</body>
+</html>
