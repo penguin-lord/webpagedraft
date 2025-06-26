@@ -1,267 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic HTML & CSS Attributes</title>
-    <style>
-       * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-        /* Navbar styles */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #007bff;
-            padding: 15px 20px;
-            position: sticky;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learn HTML & CSS | Beginner Guide</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
-        .navbar .logo {
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
-            text-decoration: none;
-        }
+    body {
+      background: #f0f2f5;
+    }
 
-        .nav-links {
-            list-style: none;
-            display: flex;
-        }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #007bff;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
 
-        .nav-links li {
-            margin: 0 15px;
-        }
+    .navbar .logo {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      text-decoration: none;
+    }
 
-        .nav-links a {
-            text-decoration: none;
-            color: white;
-            font-size: 16px;
-            transition: 0.3s;
-        }
+    .nav-links {
+      list-style: none;
+      display: flex;
+    }
 
-        .nav-links a:hover {
-            text-decoration: underline;
-        }
+    .nav-links li {
+      margin: 0 15px;
+    }
 
-        /* Hamburger Menu for Mobile */
-        .menu-toggle {
-            display: none;
-        }
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      transition: 0.3s;
+    }
 
-        .hamburger {
-            display: none;
-            font-size: 24px;
-            color: white;
-            cursor: pointer;
-            background: none;
-            border: none;
-        }
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                width: 100%;
-                background-color: #007bff;
-                text-align: center;
-                padding: 10px 0;
-            }
+    .menu-toggle {
+      display: none;
+    }
 
-            .nav-links li {
-                margin: 10px 0;
-            }
+    .hamburger {
+      display: none;
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
 
-            .hamburger {
-                display: block;
-            }
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #007bff;
+        text-align: center;
+        padding: 10px 0;
+      }
 
-            /* Show menu when checkbox is checked */
-            .menu-toggle:checked + .nav-links {
-                display: flex;
-            }
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2 {
-            text-align: center;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #007bff;
-            color: white;
-        }
-        pre {
-            background: #f8f9fa;
-            padding: 10px;
-            border-radius: 5px;
-            overflow-x: auto;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 10px auto;
-            border-radius: 5px;
-        }
-        @media (max-width: 600px) {
-            table {
-                font-size: 12px;
-            }
-            th, td {
-                padding: 6px;
-            }
-        }
-    </style>
+      .nav-links li {
+        margin: 10px 0;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      #menu-toggle:checked ~ .nav-links {
+        display: flex;
+      }
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow-x: hidden;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    p.intro {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+
+    pre {
+      background: #f8f9fa;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      color: #666;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      table {
+        font-size: 12px;
+      }
+
+      th, td {
+        padding: 6px;
+      }
+    }
+  </style>
 </head>
 <body>
-     <audio loop autoplay>
-  <source src="rmhs_hymn.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-   <nav class="navbar">
-        <a href="#" class="logo">Hello World</a>
-        
-        <!-- Hidden checkbox for menu toggle -->
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        <label for="menu-toggle" class="hamburger">&#9776;</label>
 
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="courses.html">Courses</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-        </ul>
-    </nav>
-    <div class="container">
-        <h1>Basic HTML & CSS Attributes</h1>
-        
-        <h2>HTML Basic Attributes</h2>
-        <table>
-            <tr>
-                <th>Attribute</th>
-                <th>Description</th>
-                <th>Example</th>
-            </tr>
-            <tr>
-                <td>id</td>
-                <td>Specifies a unique id for an element.</td>
-                <td><pre>&lt;p id="intro"&gt;Hello World!&lt;/p&gt;</pre></td>
-            </tr>
-            <tr>
-                <td>class</td>
-                <td>Specifies one or more class names for an element.</td>
-                <td><pre>&lt;p class="text"&gt;Hello World!&lt;/p&gt;</pre></td>
-            </tr>
-            <tr>
-                <td>style</td>
-                <td>Inline CSS styles for an element.</td>
-                <td><pre>&lt;p style="color: red;"&gt;Hello World!&lt;/p&gt;</pre></td>
-            </tr>
-            <tr>
-                <td>title</td>
-                <td>Specifies extra information when hovering over an element.</td>
-                <td><pre>&lt;p title="Hello Tooltip"&gt;Hover over me!&lt;/p&gt;</pre></td>
-            </tr>
-            <tr>
-                <td>alt</td>
-                <td>Alternative text for images.</td>
-                <td><pre>&lt;img src="image.jpg" alt="Sample Image"&gt;</pre></td>
-            </tr>
-            <tr>
-                <td>href</td>
-                <td>Specifies the URL of a link.</td>
-                <td><pre>&lt;a href="https://example.com"&gt;Visit Example&lt;/a&gt;</pre></td>
-            </tr>
-        </table>
-        
-        <h2>Basic CSS Properties</h2>
-        <table>
-            <tr>
-                <th>Property</th>
-                <th>Description</th>
-                <th>Example</th>
-            </tr>
-            <tr>
-                <td>color</td>
-                <td>Sets the text color.</td>
-                <td><pre>color: blue;</pre></td>
-            </tr>
-            <tr>
-                <td>background-color</td>
-                <td>Sets the background color.</td>
-                <td><pre>background-color: yellow;</pre></td>
-            </tr>
-            <tr>
-                <td>font-size</td>
-                <td>Defines the size of text.</td>
-                <td><pre>font-size: 16px;</pre></td>
-            </tr>
-            <tr>
-                <td>margin</td>
-                <td>Creates space outside an element.</td>
-                <td><pre>margin: 10px;</pre></td>
-            </tr>
-            <tr>
-                <td>padding</td>
-                <td>Creates space inside an element.</td>
-                <td><pre>padding: 20px;</pre></td>
-            </tr>
-            <tr>
-                <td>border</td>
-                <td>Defines a border around an element.</td>
-                <td><pre>border: 2px solid black;</pre></td>
-            </tr>
-        </table>
-        
-        <h2>Table Example</h2>
-        <table>
-            <tr>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Country</th>
-            </tr>
-            <tr>
-                <td>John Doe</td>
-                <td>25</td>
-                <td>USA</td>
-            </tr>
-            <tr>
-                <td>Jane Smith</td>
-                <td>30</td>
-                <td>Canada</td>
-            </tr>
-        </table>
-        
-        <h2>Image Example</h2>
-        <img src="icon.jpg" width="450" height="450" alt="Placeholder Image">
+  <!-- Optional school hymn -->
+  <audio autoplay loop>
+    <source src="rmhs_hymn.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="#" class="logo">Learn Programming</a>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+    <label for="menu-toggle" class="hamburger">&#9776;</label>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <h1>Welcome to Your HTML & CSS Study Guide</h1>
+    <p class="intro">This webpage is for beginners who want to learn basic HTML and CSS attributes with examples. Built by a student, for students. </p>
+
+    <h2> Common HTML Attributes</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Attribute</th>
+            <th>Description</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>id</td>
+            <td>Specifies a unique ID for an element</td>
+            <td><pre>&lt;p id="intro"&gt;Hello&lt;/p&gt;</pre></td>
+          </tr>
+          <tr>
+            <td>class</td>
+            <td>Defines class(es) for styling multiple elements</td>
+            <td><pre>&lt;p class="highlight"&gt;Hi!&lt;/p&gt;</pre></td>
+          </tr>
+          <tr>
+            <td>style</td>
+            <td>Inline CSS styling</td>
+            <td><pre>&lt;p style="color:red;"&gt;Red Text&lt;/p&gt;</pre></td>
+          </tr>
+          <tr>
+            <td>title</td>
+            <td>Tooltip text on hover</td>
+            <td><pre>&lt;p title="Info"&gt;Hover me!&lt;/p&gt;</pre></td>
+          </tr>
+          <tr>
+            <td>alt</td>
+            <td>Text shown if image fails to load</td>
+            <td><pre>&lt;img src="x.jpg" alt="Missing image"&gt;</pre></td>
+          </tr>
+          <tr>
+            <td>href</td>
+            <td>Specifies a link destination</td>
+            <td><pre>&lt;a href="https://example.com"&gt;Visit&lt;/a&gt;</pre></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+
+    <h2>Basic CSS Properties</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>Description</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>color</td>
+            <td>Text color</td>
+            <td><pre>color: blue;</pre></td>
+          </tr>
+          <tr>
+            <td>background-color</td>
+            <td>Element background color</td>
+            <td><pre>background-color: yellow;</pre></td>
+          </tr>
+          <tr>
+            <td>font-size</td>
+            <td>Text size</td>
+            <td><pre>font-size: 20px;</pre></td>
+          </tr>
+          <tr>
+            <td>margin</td>
+            <td>Space outside element</td>
+            <td><pre>margin: 10px;</pre></td>
+          </tr>
+          <tr>
+            <td>padding</td>
+            <td>Space inside element</td>
+            <td><pre>padding: 15px;</pre></td>
+          </tr>
+          <tr>
+            <td>border</td>
+            <td>Element border</td>
+            <td><pre>border: 1px solid black;</pre></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2> Sample Data Table</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Country</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>John Doe</td>
+            <td>21</td>
+            <td>Philippines</td>
+          </tr>
+          <tr>
+            <td>Ana Cruz</td>
+            <td>18</td>
+            <td>Japan</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>🖼 Image Example</h2>
+    <img src="icon.jpg" width="400" height="400" alt="Sample Image" />
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Made with ❤️ by JDDA | Share this with a friend learning to code!</p>
+  </footer>
 </body>
 </html>
-

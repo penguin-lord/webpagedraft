@@ -1,111 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="icon.jpg">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-</head>
-<style>
-    body{
-        color: white;
-        margin: 0;
-        padding: 0; 
-        font-family: 'Courier New', Courier, monospace;
-        background-image: url("about_background.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | RMHS</title>
+  <link rel="icon" href="icon.jpg" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    .topnav{
-        overflow: hidden; 
-        background-color: #10efef;
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url("about_background.jpg") no-repeat center center/cover;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
-    .topnav a{
-        display: block; 
-        text-align: center; 
-        text-decoration: none; 
-        color: black; 
-        float: left; 
-        padding: 16px 16px; 
-        font-size: 15px; 
-        font-family: Arial; 
-        animation: rainbow 10s linear infinite;
+
+    header {
+      background-color: rgba(0, 129, 154, 0.95);
+      padding: 1.5rem;
+      text-align: center;
     }
-    .topnav a:hover{
-        color: white; 
-        background-color: rgb(149, 0, 255);
+
+    header h1 {
+      font-size: 2rem;
+      animation: rainbow 5s linear infinite;
     }
-    header{
-        background-color: rgb(0, 129, 154); 
-        padding: 20PX 20PX; 
-        height: 20%;
+
+    nav {
+      background-color: #10efef;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
-    h1, h3{
-        font-size: 2em;
-        text-align: center;
-        font-family: verdana; 
-        animation: rainbow 5s linear infinite;
+
+    nav a {
+      padding: 15px 20px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      transition: 0.3s;
+      animation: rainbow 10s linear infinite;
     }
-    @keyframes rainbow{
-        20% {color:gold;} 
-        40% {color:blue;} 
-        60% {color: red;} 
-        80%{color: indigo;}
-        100%{color:violet;} 
+
+    nav a:hover {
+      background-color: purple;
+      color: white;
     }
-    footer{
-        padding: 18px 18px; 
-        text-align: center; 
-        background-color: blue; 
-        color: white; 
-        font-size: 18px;
-        bottom: 0;
+
+    @keyframes rainbow {
+      0% { color: red; }
+      25% { color: orange; }
+      50% { color: yellow; }
+      75% { color: green; }
+      100% { color: blue; }
     }
+
+    main {
+      flex: 1;
+      padding: 2rem;
+      backdrop-filter: brightness(0.9);
+    }
+
+    h3 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-family: "Times New Roman", Times, serif;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+    }
+
     table {
-        width: 85vw; 
-        margin: 20px auto;
-        border-collapse: collapse;
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 auto;
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 10px;
+      overflow: hidden;
     }
+
     th, td {
-        border: 1px solid white; 
-        padding: 15px; 
+      padding: 20px;
+      text-align: center;
+      border: 1px solid white;
+    }
+
+    td img {
+      width: 100%;
+      max-width: 350px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    footer {
+      background-color: #003366;
+      text-align: center;
+      padding: 1rem;
+      font-size: 14px;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      th, td {
+        font-size: 14px;
+        padding: 10px;
+      }
+
+      nav a {
+        flex: 1 1 100%;
         text-align: center;
-    } 
- </style>
+      }
+    }
+  </style>
+</head>
 <body>
-     <audio loop autoplay>
-  <source src="rmhs_hymn.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-   <header>
+
+  <audio loop autoplay>
+    <source src="rmhs_hymn.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <header>
     <h1>TLE INDUSTRY STANDARDS</h1>
-   </header> 
-   <div class="topnav">
+  </header>
+
+  <nav>
     <a href="index.html">HOME</a>
     <a href="about.html">ABOUT</a>
     <a href="gallery.html">GALLERY</a>
     <a href="courses.html">COURSES</a>
-         <a href="attribute.html">ATTRIBUTE</a>
+    <a href="attribute.html">ATTRIBUTE</a>
+  </nav>
+
+  <main>
+    <h3>Setting the Benchmark: Advancing TLE Industry Standards for Innovation and Excellence</h3>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>LEADING TO QUALITY EDUCATION</th>
+            <th>VISUAL INSIGHT</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-size: 1rem;">
+              Empowering progress through cutting-edge technology, licensing agreements, and top-of-the-line equipment. <br><br>
+              Our commitment to excellence drives the industry forward, setting new standards and pushing boundaries. <br><br>
+              Join us in shaping the future of TLE with innovation and precision. <br><br>
+              Elevate your operations with our industry-leading standards and expertise.
+            </td>
+            <td>
+              <img src="about.jpg" alt="Empowerment Image" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Quality education is the key to unlocking endless opportunities and empowering individuals to reach their full potential. <br><br>
+              By investing in education, we are investing in a brighter future. <br><br>
+              Together, let's ensure every learner has access to excellence and equality.
+            </td>
+            <td>
+              <img src="educationjpg.jpg" alt="Education Image" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-<h3 style="text-align: center; font-family: times new roman;">Setting the Benchmark: Advancing TLE Industry Standards for Innovation and Excellence</h3>    
-<table>
-    <TR>
-        <th>LEADING TO QUALITY EDUCATION</th>
-        <th>HI</th>
-    </tR>
-<tr>
-    <td style="font-size: large;">Empowering progress through cutting-edge technology,<br> licensing agreements, and top-of-the-line equipment.<br> Our commitment to excellence drives the industry forward,<br> setting new standards and pushing boundaries.<br> Join us in shaping the future of TLE with innovation and precision.<br> Elevate your operations with our industry-leading standards and expertise</td>
-    <td><img src="about.jpg"  height="350px" width="350px" alt="image here"/></td>
-</tr>
-<tr>
-    <td>Quality education is the key to unlocking endless opportunities and empowering individuals to reach their full potential. By investing in education, we are investing in a brighter future for our society. Together, let's strive to provide every individual with access to quality education, ensuring a more equitable and prosperous world for all.</td>
-    <td><img src="educationjpg.jpg" height="350px" width="350px"/></td>
-</tr>
-</table>
-<footer class="col-md-6 col-sm-6 col-xs-12 copyright">
-    <!---ONE OF THE MOST OUTSTANDING SCHOOL IN MANILA--->
-    <p>Designed & Developed By: <b></b>RMHS-MANILA WEBPAGE TEAM</b> &copy;WEBPAGE DEVELOPMENT 2025</p>
-</footer>    
+  </main>
+
+  <footer>
+    Designed & Developed By: <strong>RMHS-MANILA WEBPAGE TEAM</strong> &copy; Webpage Development 2025
+  </footer>
+
 </body>
 </html>

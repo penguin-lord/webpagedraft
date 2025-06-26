@@ -1,221 +1,87 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Home | RMHS</title>
-    <link rel="icon" href="icon.jpg">
-    <style>
-        :root {
-            --primary: #007bff;
-            --secondary: #0056b3;
-            --text-light: #ffffff;
-            --text-dark: #000000;
-            --bg-overlay: rgba(0, 0, 0, 0.5);
-        }* {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background: linear-gradient(var(--bg-overlay), var(--bg-overlay)), url("img/download.jpg") no-repeat center center/cover;
-        color: var(--text-light);
-    }
-
-    header {
-        background: linear-gradient(to left, var(--primary), var(--secondary));
-        padding: 1.5rem;
-        text-align: center;
-    }
-
-    h1 {
-        font-size: 2rem;
-        animation: rainbow 6s linear infinite;
-    }
-
-    @keyframes rainbow {
-        0% { color: red; }
-        16.66% { color: orange; }
-        33.33% { color: yellow; }
-        50% { color: green; }
-        66.66% { color: blue; }
-        83.33% { color: indigo; }
-        100% { color: violet; }
-    }
-
-    nav {
-        position: relative;
-        padding: 1rem;
-	z-index: 3;
-    }
-
-    .menu-icon {
-        display: none;
-        flex-direction: column;
-        cursor: pointer;
-        position: absolute;
-        top: 1rem;
-        left: 1rem;
-        z-index: 10;
-    }
-
-    .menu-icon div {
-        width: 25px;
-        height: 3px;
-        background: white;
-        margin: 4px 0;
-    }
-
-    #menu-toggle {
-        display: none;
-    }
-
-    .menu {
-        display: flex;
-        justify-content: center;
-        list-style: none;
-        gap: 1rem;
-        flex-wrap: wrap;
-    }
-
-    .menu li a {
-        color: var(--text-light);
-        text-decoration: none;
-        font-weight: bold;
-        padding: 0.5rem 1rem;
-        transition: 0.3s;
-    }
-
-    .menu li a:hover {
-        background-color: var(--text-light);
-        color: var(--text-dark);
-        border-radius: 4px;
-    }
-
-    @media (max-width: 768px) {
-        .menu {
-            display: none;
-            flex-direction: column;
-            background: var(--primary);
-            position: absolute;
-            top: 60px;
-            left: 0;
-            width: 100%;
-        }
-        
-        #menu-toggle:checked + .menu-icon + .menu {
-            display: flex;
-        }
-        .menu-icon {
-            display: flex;
-        }
-    }
-
-    article {
-        padding: 2rem;
-        text-align: justify;
-    }
-
-    table {
-        width: 100%;
-        margin: 2rem auto;
-        border-collapse: collapse;
-        background-color: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(5px);
-    }
-
-    th, td {
-        border: 1px solid #ffffff;
-        padding: 1rem;
-        color: #ffffff;
-    }
-
-    footer {
-        background: var(--secondary);
-        text-align: center;
-        padding: 1rem;
-        margin-top: 2rem;
-    }
-</style>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Home | RMHS</title>
+  <link rel="icon" href="icon.jpg" />
+  <link rel="stylesheet" href="css/index.css"></link>
 </head>
 <body>
-    <audio autoplay loop>
-        <source src="rmhs_hymn.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio><header>
-    <h1>Empowering The Youth For National Resilience</h1>
-</header>
+  <audio autoplay loop>
+    <source src="rmhs_hymn.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
 
-<nav>
-    <input type="checkbox" id="menu-toggle">
+  <header>
+    <h1>Empowering The Youth For National Resilience</h1>
+  </header>
+
+  <nav>
+    <input type="checkbox" id="menu-toggle" />
     <label class="menu-icon" for="menu-toggle">
-        <div></div>
-        <div></div>
-        <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
     </label>
     <ul class="menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="courses.html">Courses</a></li>
-        <li><a href="attribute.html">Attributes</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="attribute.html">Attributes</a></li>
     </ul>
-</nav>
+  </nav>
 
-<article>
+  <article>
     <h2 style="font-family: monospace;">Ramon Magsaysay High School Manila</h2>
     <p>This is the official webpage of RMHS Manila.</p>
 
-    <table>
+    <div class="table-wrapper">
+      <table>
         <thead>
-            <tr>
-                <th>THE DEPED VISION</th>
-                <th>THE DEPED MISSION</th>
-                <th>THE CORE VALUES</th>
-            </tr>
+          <tr>
+            <th>THE DEPED VISION</th>
+            <th>THE DEPED MISSION</th>
+            <th>THE CORE VALUES</th>
+          </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>
-                    We dream of Filipinos<br>
-                    who passionately love their country<br>
-                    and whose values and competencies<br>
-                    enable them to realize their full potential<br>
-                    and contribute meaningfully to building the nation.<br><br>
-                    As a learner-centered public institution,<br>
-                    the Department of Education<br>
-                    continuously improves itself<br>
-                    to better serve its stakeholders.
-                </td>
-                <td>
-                    To protect and promote the right of every Filipino to quality, equitable, culture-based, and complete basic education where:<br><br>
-                    <b>Students</b> learn in a child-friendly, gender-sensitive, safe, and motivating environment.<br><br>
-                    <b>Teachers</b> facilitate learning and constantly nurture every learner.<br><br>
-                    <b>Administrators</b> and staff, as stewards of the institution, ensure an enabling and supportive environment for effective learning to happen.<br><br>
-                    <b>Family,</b> community, and other stakeholders are actively engaged and share responsibility for developing life-long learners.
-                </td>
-                <td>
-                    <b>Maka-Diyos</b><br>
-                    <b>Maka-tao</b><br>
-                    <b>Makakalikasan</b><br>
-                    <b>Makabansa</b>
-                </td>
-            </tr>
+          <tr>
+            <td>
+              We dream of Filipinos<br />
+              who passionately love their country<br />
+              and whose values and competencies<br />
+              enable them to realize their full potential<br />
+              and contribute meaningfully to building the nation.<br /><br />
+              As a learner-centered public institution,<br />
+              the Department of Education<br />
+              continuously improves itself<br />
+              to better serve its stakeholders.
+            </td>
+            <td>
+              To protect and promote the right of every Filipino to quality, equitable, culture-based, and complete basic education where:<br /><br />
+              <b>Students</b> learn in a child-friendly, gender-sensitive, safe, and motivating environment.<br /><br />
+              <b>Teachers</b> facilitate learning and constantly nurture every learner.<br /><br />
+              <b>Administrators</b> and staff, as stewards of the institution, ensure an enabling and supportive environment for effective learning to happen.<br /><br />
+              <b>Family,</b> community, and other stakeholders are actively engaged and share responsibility for developing life-long learners.
+            </td>
+            <td>
+              <b>Maka-Diyos</b><br />
+              <b>Maka-tao</b><br />
+              <b>Makakalikasan</b><br />
+              <b>Makabansa</b>
+            </td>
+          </tr>
         </tbody>
-    </table>
-</article>
+      </table>
+    </div>
+  </article>
 
-<footer>
+  <footer>
     <p>Designed & Developed By: <strong>JDDA</strong> &copy; Webpage Development 2024</p>
-</footer>
-
+  </footer>
 </body>
 </html>
-<!--FOR THOSE WHO WILL USE THIS CODE NEXT SCHOOL YEAR, HERE ARE THE LIST OF MY TIPS FOR YOU... I HOPE IT WILL HELP YOU-->
-<!--The content above is just an example-->
-<!-----The "meta" Tag is not necesary to put in the code☺----><!---ILAGAY NIYO NALANG PALA KASI REQUIRED ITO SA MGA BROWSERS--->
-<!--Just study and discover the concept and logic of this entire code and you will easily to memorize it-->
-<!--GOODLUCK-->
+
