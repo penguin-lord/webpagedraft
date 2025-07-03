@@ -7,6 +7,32 @@
   <title>Home | RMHS</title>
   <link rel="icon" href="icon.jpg" />
   <link rel="stylesheet" href="css/index.css"></link>
+  <style>
+        .hidden {
+        display: none;
+    }
+
+    #customPromptOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+
+    #customPromptBox {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+  </style>
 </head>
 <body>
   <audio autoplay loop>
@@ -78,10 +104,44 @@
       </table>
     </div>
   </article>
-
+    <div id="customPromptOverlay" class="hidden">
+        <div id="customPromptBox">
+            <p id="promptMessage"></p>
+            <input type="text" id="promptInput">
+            <button id="promptOkButton">OK</button>
+            <button id="promptCancelButton">Cancel</button>
+        </div>
+    </div>
   <footer>
     <p>Designed & Developed By: <strong>JDDA</strong> &copy; Webpage Development 2024</p>
   </footer>
 </body>
+<script>
+function showCustomPrompt(Hi, defaultValue, callback) {
+        document.getElementById('promptMessage').textContent = message;
+        document.getElementById('promptInput').value = defaultValue || '';
+        document.getElementById('customPromptOverlay').classList.remove('hidden');
+
+        document.getElementById('promptOkButton').onclick = function() {
+            const inputValue = document.getElementById('promptInput').value;
+            document.getElementById('customPromptOverlay').classList.add('hidden');
+            if (callback) callback(inputValue);
+        };
+
+        document.getElementById('promptCancelButton').onclick = function() {
+            document.getElementById('customPromptOverlay').classList.add('hidden');
+            if (callback) callback(null); // Indicate cancellation
+        };
+    }
+
+    // Example usage:
+    // showCustomPrompt("Please enter your name:", "John Doe", function(name) {
+    //     if (name !== null) {
+    //         console.log("User entered:", name);
+    //     } else {
+    //         console.log("User cancelled.");
+    //     }
+    // });
+</script>
 </html>
 
