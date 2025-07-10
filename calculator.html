@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <title>My First Calculator</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        background: #f2f2f2;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      #mycalculator {
+        background: #333;
+        padding: 20px;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        width: 300px;
+      }
+
+      #display {
+        width: 100%;
+        padding: 15px;
+        font-size: 24px;
+        border: none;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        text-align: right;
+        background: #fff;
+        color: #000;
+      }
+
+      .buttons {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+      }
+
+      .buttons button {
+        padding: 15px;
+        font-size: 18px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        background: #111;
+        color: #fff;
+        transition: 0.2s ease;
+      }
+
+      .buttons button:hover {
+        background: #555;
+      }
+
+      .buttons button:active {
+        transform: scale(0.95);
+      }
+
+      /* Optional: Highlight different buttons */
+      .buttons button:nth-child(13),
+      .buttons button:nth-child(14) {
+        background-color: #1e88e5;
+      }
+
+      .buttons button:nth-child(15) {
+        background-color: #43a047;
+      }
+
+      .buttons button:nth-child(16) {
+        background-color: #e53935;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mycalculator" class="Calculator">
+      <input type="text" id="display" disabled />
+      <div class="buttons">
+        <button>9</button>
+        <button>8</button>
+        <button>7</button>
+        <button>+</button>
+        <button>6</button>
+        <button>5</button>
+        <button>4</button>
+        <button>-</button>
+        <button>3</button>
+        <button>2</button>
+        <button>1</button>
+        <button>×</button>
+        <button>0</button>
+        <button>C</button>
+        <button>.</button>
+        <button>=</button>
+        <button>÷</button>
+        <button>^</button>
+      </div>
+    </div>
+
+    <script>
+      class Calculator {
+        constructor(displayElement) {
+          this.displayElement = displayElement;
+          this.currentValue = "";
+        }
+
+        append(value) {
+          if (value === "×") value = "*";
+          if (value === "÷") value = "/";
+          if(value === "^") value = "**";
+          this.currentValue += value;
+          this.updateDisplay();
+        }
+
+        clear() {
+          this.currentValue = "";
+          this.updateDisplay();
+        }
+
+        calculate() {
+          try {
+            this.currentValue = eval(this.currentValue).toString();
+            this.updateDisplay();
+          } catch (err) {
+            this.currentValue = "Error";
+            this.updateDisplay();
+          }
+        }
+
+        updateDisplay() {
+          this.displayElement.value = this.currentValue;
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const display = document.getElementById("display");
+        const buttons = document.querySelectorAll(".buttons button");
+        const calc = new Calculator(display);
+
+        buttons.forEach((btn) => {
+          const val = btn.textContent;
+
+          btn.addEventListener("click", () => {
+            if (val === "C") {
+              calc.clear();
+            } else if (val === "=") {
+              calc.calculate();
+            } else {
+              calc.append(val);
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
